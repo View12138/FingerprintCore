@@ -13,6 +13,9 @@
     // 初始化帮助类
     ZkfpTool Zkfp = new ZkfpTool();
 
+    // 初始化并连接第一个指纹仪
+    Zkfp.Init(0);
+
     // 异步注册指纹
     bool success = await Zkfp.RegisterAsync();
     if(success)
@@ -30,4 +33,7 @@
     {
         // 验证成功
     }
+
+    // 释放资源
+    Zkfp.Dispose();
 ```
