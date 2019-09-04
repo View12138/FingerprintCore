@@ -26,12 +26,12 @@
     bool success = await Zkfp.RegisterAsync();
     if(success)
     {
-        // 获取指纹模板的字符串
+        // 获取刚注册的指纹模板的字符串
         string fp = Zkfp.Fingerprint;
     }
 
-    // 设置你要验证的指纹模板
-    Zkfp.Fingerprint= /* 你的指纹模板 */
+    // 设置你要验证的指纹模板字符串
+    Zkfp.Fingerprint= /* 你的指纹模板字符串 */
     
     // 异步验证
     bool success = await Zkfp.IdentifyAsync();
