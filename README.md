@@ -8,7 +8,8 @@
     2. 类库版本：.Net Standard 2.0
     3. Demo版本：.Net Framework 4.7.2
 ## 使用：
-[ZkfpHelp.dll 下载地址](https://github.com/View12138/ZkfpHelp/releases)
+[ZkfpHelp.dll 下载地址](https://github.com/View12138/ZkfpHelp/releases)  
+    
     1. 在你的 Windows 7+ 上安装 ZKFinger SDK(Windows) 5.0.0.20+
     2. 将 ZkfpHelp.dll 和 ZkfpHelp.xml 放到同一目录下 (确保能有智能提示) 
     3. 在你的项目中添加引用 ZkfpHelp.dll
