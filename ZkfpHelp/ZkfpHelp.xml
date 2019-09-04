@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZkfpHelp</name>
+    </assembly>
+    <members>
+        <member name="T:ZkfpHelp.ZkfpErrorCode">
+            <summary>
+            中控指纹错误代码
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_ALREADY_INIT">
+            <summary>
+             已经初始化
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_OK">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_INITLIB">
+            <summary>
+            初始化算法库失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_INIT">
+            <summary>
+             初始化采集库失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_NO_DEVICE">
+            <summary>
+            无设备连接
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_NOT_SUPPORT">
+            <summary>
+             接口暂不支持
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_INVALID_PARAM">
+            <summary>
+            无效参数
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_OPEN">
+            <summary>
+            打开设备失败 
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_INVALID_HANDLE">
+            <summary>
+            无效句柄
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_CAPTURE">
+            <summary>
+             取像失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_EXTRACT_FP">
+            <summary>
+            提取指纹模板失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_ABSORT">
+            <summary>
+            中断
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_MEMORY_NOT_ENOUGH">
+            <summary>
+            内存不足 
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_BUSY">
+            <summary>
+            当前正在采集
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_ADD_FINGER">
+            <summary>
+            添加指纹模板失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_DEL_FINGER">
+            <summary>
+            删除指纹失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_FAIL">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_CANCEL">
+            <summary>
+            取消采集
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_VERIFY_FP">
+            <summary>
+            比对指纹失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_MERGE">
+            <summary>
+            合并登记指纹模板失败
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_NOT_OPENED">
+            <summary>
+            设备未打开
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_NOT_INIT">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_ALREADY_OPENED">
+            <summary>
+            设备已打开
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_LOADIMAGE">
+            <summary>
+            [未知]
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_ANALYSE_IMG">
+            <summary>
+            [未知]
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpErrorCode.ZKFP_ERR_TIMEOUT">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="T:ZkfpHelp.ZkfpParamCode">
+            <summary>
+            中控指纹参数代码
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ImageWidth">
+            <summary>
+            图像宽
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ImageHeight">
+            <summary>
+            图像高
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ImageDPI">
+            <summary>
+            图像 DPI(儿童建议设置750/1000)
+            <para>属性：读写(目前只有LIVEID20R可写)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ImageDataSize">
+            <summary>
+            图像数据大小
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.VIDandPID">
+            <summary>
+            VID&amp;PID(前 2 字节VID,后 2 字节PID)
+            <para>属性：只读</para>
+            <para>数据类型：byte[4]</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.AntiSpoofingSwitch">
+            <summary>
+            防假开关(1 打开/0关闭)
+            <para>属性：读写(目前只有LIVEID20R可写)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.TrueFinger">
+            <summary>
+            第五位全为1表示真手指(value&amp;31==31)
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ManufacturerInformation">
+            <summary>
+            厂商信息
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.ProductName">
+            <summary>
+            产品名
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.SerialNumber">
+            <summary>
+            设备序列号
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.WhiteLight">
+            <summary>
+            1 表示闪白灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.GreenLight">
+            <summary>
+            1 表示闪绿灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.RedLight">
+            <summary>
+            1 表示闪红灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ZkfpParamCode.OpenBuzzer">
+            <summary>
+            1 表示开启蜂鸣器;0 表示关闭
+            <para>属性：只写(LIVE20R 不支持)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="T:ZkfpHelp.ZkfpSDK">
+            <summary>
+            中控指纹API
+            </summary>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.Init">
+            <summary>
+            初始化库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.Terminate">
+            <summary>
+            释放库资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.GetDeviceCount">
+            <summary>
+            获取连接设备数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.OpenDevice(System.Int32)">
+            <summary>
+            连接设备
+            </summary>
+            <param name="index">设备索引(0~n,n 为设备数-1)</param>
+            <returns>返回设备句柄</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.CloseDevice(System.IntPtr)">
+            <summary>
+            关闭设备
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.SetParameters(System.IntPtr,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            设置参数
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="code">参数代码(见附录说明)</param>
+            <param name="pramValue">参数值</param>
+            <param name="size">参数数据长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.GetParameters(System.IntPtr,System.Int32,System.Byte[],System.Int32@)">
+            <summary>
+            获取参数
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="code">参数代码(见附录说明)</param>
+            <param name="paramValue">参数值</param>
+            <param name="size">返回参数数据长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.AcquireFingerprint(System.IntPtr,System.Byte[],System.Byte[],System.Int32@)">
+            <summary>
+            采集指纹
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgBuffer">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <param name="size">[in]template 数组长度 [out]实际返回指纹模板长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.AcquireFingerprintAsync(System.IntPtr,System.Byte[],System.Byte[])">
+            <summary>
+            以异步方式采集指纹。
+            <para>采集成功则返回指纹的大小，采集失败则返回 <see cref="T:ZkfpHelp.ZkfpErrorCode"/> 中对应的错误代码。</para>
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgBuffer">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.AcquireFingerprintImage(System.IntPtr,System.Byte[])">
+            <summary>
+            采集指纹图像
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgbuf">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBInit">
+            <summary>
+            初始化算法库
+            </summary>
+            <returns>算法操作句柄</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBFree(System.IntPtr)">
+            <summary>
+            释放算法库
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBSetParameter(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="dbHandle"></param>
+            <param name="code"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBGetParameter(System.IntPtr,System.Int32,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="dbHandle"></param>
+            <param name="code"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBMerge(System.IntPtr,System.Byte[],System.Byte[],System.Byte[],System.Byte[],System.Int32@)">
+            <summary>
+            将三枚预登记指纹模板合并成一枚登记模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="temp1">预登记指纹模板 1</param>
+            <param name="temp2">预登记指纹模板 2</param>
+            <param name="temp3">预登记指纹模板 3</param>
+            <param name="regTemp">返回登记模板</param>
+            <param name="regTempLen">[in]regTemp 数组长度,[out]实际返回指纹模板长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBAdd(System.IntPtr,System.Int32,System.Byte[])">
+            <summary>
+            添加一枚登记模板到内存
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="fid">指纹 ID(1:N 识别成功返回指纹 ID)</param>
+            <param name="regTemp">登记模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBDel(System.IntPtr,System.Int32)">
+            <summary>
+            从内存中删除一枚登记模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="fid">指纹 ID(1:N 识别成功返回指纹 ID)</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBClear(System.IntPtr)">
+            <summary>
+            清空内存中所有指纹模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBCount(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="dbHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBIdentify(System.IntPtr,System.Byte[],System.Int32@,System.Int32@)">
+            <summary>
+            1:N 识别
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="temp">比对模板</param>
+            <param name="fid">返回指纹 ID</param>
+            <param name="score">返回比对分数</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.DBMatch(System.IntPtr,System.Byte[],System.Byte[])">
+            <summary>
+            1:1 比对两枚指纹
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="temp1">比对模板 1</param>
+            <param name="temp2">比对模板 2</param>
+            <returns>>=0 表示比对分数，其他失败（见错误代码说明）</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.ExtractFromImage(System.IntPtr,System.String,System.Int32,System.Byte[],System.Int32@)">
+            <summary>
+            从 BMP 或者 JPG 文件提取模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="FileName">文件全路径</param>
+            <param name="DPI">图像 DPI</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <param name="size">[in]template 数组长度, [out] 实际返回指纹模板长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.Base64ToBlob(System.String)">
+            <summary>
+            Base64 字符串转 byte[]
+            </summary>
+            <param name="base64Str">Base64 字符串</param>
+            <returns>byte[]数组</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.BlobToBase64(System.Byte[],System.Int32)">
+            <summary>
+            byte[]转 Base64 字符串
+            </summary>
+            <param name="blob">blob 数据</param>
+            <param name="nDataLen">长度</param>
+            <returns>返回 Base64 字符串</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.ByteArray2Int(System.Byte[],System.Int32@)">
+            <summary>
+            4 字节 byte 数组转 Int
+            </summary>
+            <param name="buf">byte 数组</param>
+            <param name="value">返回数据</param>
+            <returns>true 成功;false 失败</returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.Int2ByteArray(System.Int32,System.Byte[])">
+            <summary>
+            Int 转 4 字节 byte 数组
+            </summary>
+            <param name="value">数据</param>
+            <param name="buf">byte 数组</param>
+            <returns>true 成功;false 失败</returns>
+        </member>
+        <member name="T:ZkfpHelp.ZkfpTool">
+            <summary>
+            中控指纹仪操作类
+            <para>可异步注册指纹、异步验证已有指纹。</para>
+            </summary>
+        </member>
+        <member name="P:ZkfpHelp.ZkfpTool.Fingerprint">
+            <summary>
+            获取或设置当前用户账户中保存的指纹模板(base64)
+            </summary>
+        </member>
+        <member name="P:ZkfpHelp.ZkfpTool.FingrtImage">
+            <summary>
+            获取用户最新一次验证成功时的指纹图片
+            </summary>
+        </member>
+        <member name="E:ZkfpHelp.ZkfpTool.RegisterEvent">
+            <summary>
+            注册指纹时有提示时发生
+            </summary>
+        </member>
+        <member name="T:ZkfpHelp.ZkfpTool.RegisterTipsHandler">
+            <summary>
+            表示注册指纹时的提示方法
+            </summary>
+            <param name="tips">提示内容</param>
+            <param name="tipsBrush">提示文本的颜色</param>
+        </member>
+        <member name="T:ZkfpHelp.ZkfpTool.StringHandler">
+            <summary>
+            表示将用于处理具有字符串数据的事件方法
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.#ctor">
+            <summary>
+            中控指纹仪器的帮助类
+            </summary>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.Init">
+            <summary>
+            初始化并连接第一个设备
+            </summary>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.Init(System.Int32)">
+            <summary>
+            初始化并连接指定的设备
+            </summary>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.Dispose">
+            <summary>
+            释放使用的资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.Identify">
+            <summary>
+            以同步的方式验证当前用户是否为本人
+            <para>调用此方法之前对 <see cref="P:ZkfpHelp.ZkfpTool.Fingerprint"/> 属性赋值</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.IdentifyAsync">
+            <summary>
+            以异步的方式验证当前用户是否为本人。
+            <para>验证成功返回 <see langword="true"/> ，验证失败返回<see  langword="false"/>。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.Fingerprint"/> 属性获取操作成功之后的指纹模板字符串。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.FingrtImage"/> 属性获取操作成功之后的指纹图像。</para>
+            <para></para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.Register">
+            <summary>
+            以同步的方式注册当前用户的指纹信息，并保存到 <see cref="P:ZkfpHelp.ZkfpTool.Fingerprint"/> 中。
+            <para>若需要注册时的提示文本，请注册 <see cref="E:ZkfpHelp.ZkfpTool.RegisterEvent"/> 事件。</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.RegisterAsync(ZkfpHelp.ZkfpTool.RegisterTipsHandler)">
+            <summary>
+            以异步的方式注册指纹。
+            <para>注册成功返回 <see  langword="true"/>，注册失败返回 <see langword="false"/>。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.Fingerprint"/> 属性获取操作成功之后的指纹模板字符串。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.FingrtImage"/> 属性获取操作成功之后的指纹图像。</para>
+            </summary>
+            <param name="RegisterTips">若需要注册时的提示文本，请传入提示文本处理方法。</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.SetValue(System.Int32,System.Int32)">
+            <summary>
+            设置参数
+            </summary>
+            <param name="code">参数代码</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.RotatePic(System.Byte[],System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            旋转图片，目的是保存和显示的图片与按的指纹方向不同
+            </summary>
+            <param name="BmpBuf">旋转前的指纹字符串</param>
+            <param name="width">旋转后的指纹字符串</param>
+            <param name="height"></param>
+            <param name="ResBuf"></param>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.StructToBytes(System.Object,System.Int32)">
+            <summary>
+            将结构体转化成无符号字符串数组
+            </summary>
+            <param name="StructObj">被转化的结构体</param>
+            <param name="Size">被转化的结构体的大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.GetBitmap(System.Byte[],System.Int32,System.Int32,System.IO.MemoryStream@)">
+            <summary>
+            将指纹图像 <see cref="T:System.Byte"/>[] 转换为 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="buffer"></param>
+            <param name="nWidth"></param>
+            <param name="nHeight"></param>
+            <param name="ms"></param>
+        </member>
+        <member name="T:ZkfpHelp.ColorInfo">
+            <summary>
+            颜色信息
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ColorInfo.Success">
+            <summary>
+            成功的颜色
+            </summary>
+        </member>
+        <member name="F:ZkfpHelp.ColorInfo.Fail">
+            <summary>
+            失败的颜色
+            </summary>
+        </member>
+    </members>
+</doc>

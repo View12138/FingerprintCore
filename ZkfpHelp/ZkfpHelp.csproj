@@ -4,4 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Projects\view\.NET\ZkfpHelp\ZkfpHelp\ZkfpHelp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Projects\view\.NET\ZkfpHelp\ZkfpHelp\ZkfpHelp.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
