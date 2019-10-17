@@ -7,6 +7,9 @@
 	1. 使用设备：中控指纹 Live 20R
     2. 类库版本：.Net Standard 2.0
     3. Demo版本：.Net Framework 4.7.2
+## 建议：
+    0.只有注册指纹和验证已有指纹时，请只使用 `ZkfpHelp.ZkfpTool` 类。
+    1.有其它复杂使用场景时，请参照 `ZKFP` 官方文档使用。
 ## 使用：
     可参照 ZkfpDemo 项目
 ```
@@ -36,4 +39,43 @@
 
     // 释放资源
     Zkfp.Dispose();
+```
+## 更新
+    新增可以取消验证指纹，使用方法：
+```
+    CancellationTokenSource cts = new CancellationTokenSource();
+    CancellationToken token;
+
+    /// <summary>
+    /// 开始指纹验证
+    /// </summary>
+    public async void BeginIdentify()
+    {
+        token = cts.Token;
+        bool? result = await App.Zkfp.IdentifyAsync(token);
+        if(result==null)
+        {
+            //取消验证
+        }
+        else if(result.Value)
+        {
+            //验证成功
+        }
+        else
+        {
+            //验证失败
+        }
+    }
+
+    /// <summary>
+    /// 取消指纹验证
+    /// </summary>
+    public void CancekIdentify()
+    {
+        if (!token.IsCancellationRequested)
+        {
+            cts.Cancel();
+        }
+    }
+
 ```
