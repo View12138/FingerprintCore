@@ -214,6 +214,51 @@ namespace ZkfpHelp
             SetValue(ZkfpParamCode.RedLight, 1);
             return false;
         }
+        /// <summary>
+        /// 以异步的方式验证当前用户是否为本人。
+        /// <para>验证成功返回 <see langword="true"/> ，验证失败返回<see  langword="false"/>。</para>
+        /// <para>可以通过 <see cref="Fingerprint"/> 属性获取操作成功之后的指纹模板字符串。</para>
+        /// <para>可以通过 <see cref="FingrtImage"/> 属性获取操作成功之后的指纹图像。</para>
+        /// <para>如果返回值为 <see langword="null"/> ，则代表取消验证</para>
+        /// </summary>
+        /// <param name="token">取消异步等待</param>
+        /// <returns></returns>
+        public async Task<bool?> IdentifyAsync(CancellationToken token)
+        {
+            if (_device == IntPtr.Zero || _db == IntPtr.Zero) { return false; }
+            if (Fingerprint == string.Empty) { return false; }
+            byte[] imagebuffer = new byte[_imageWidth * _imageHeight];
+            int size = 2048;
+            byte[] template = new byte[size];
+            int code = await ZkfpSDK.AcquireFingerprintAsync(_device, imagebuffer, template, token);
+            FingrtImage = null;
+            if (code == ZkfpErrorCode.ZKFP_ERR_CANCEL)
+            { return null; }
+            else if (code > 0)
+            {
+                byte[] tempAccount = ZkfpSDK.Base64ToBlob(Fingerprint);
+                int socre = ZkfpSDK.DBMatch(_db, template, tempAccount);
+                if (socre > 0)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    GetBitmap(imagebuffer, _imageWidth, _imageHeight, ref ms);
+                    FingrtImage = ms;
+
+                    SetValue(ZkfpParamCode.GreenLight, 1);
+                    return true;
+                }
+                else
+                {
+                    SetValue(ZkfpParamCode.RedLight, 1);
+                    return false;
+                }
+            }
+            else
+            {
+                SetValue(ZkfpParamCode.RedLight, 1);
+                return false;
+            }
+        }
 
         /// <summary>
         /// 以同步的方式注册当前用户的指纹信息，并保存到 <see cref="Fingerprint"/> 中。

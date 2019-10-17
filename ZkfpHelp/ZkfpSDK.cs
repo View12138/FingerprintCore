@@ -223,6 +223,50 @@ namespace ZkfpHelp
             return size;
         }
         /// <summary>
+        /// 以异步方式采集指纹。
+        /// <para>采集成功则返回指纹的大小，采集失败则返回 <see cref="ZkfpErrorCode"/> 中对应的错误代码。</para>
+        /// </summary>
+        /// <param name="devHandle">设备句柄</param>
+        /// <param name="imgBuffer">返回图像（数组大小为 imageWidth*imageHeight）</param>
+        /// <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+        /// <returns></returns>
+        public async static Task<int> AcquireFingerprintAsync(IntPtr devHandle, byte[] imgBuffer, byte[] template, CancellationToken token)
+        {
+            if (IntPtr.Zero == devHandle)
+            {
+                return ZkfpErrorCode.ZKFP_ERR_INVALID_HANDLE;
+            }
+            int size = template.Length;
+            IntPtr intPtr = Marshal.AllocHGlobal(imgBuffer.Length);
+            IntPtr intPtr2 = Marshal.AllocHGlobal(size);
+            int num = 0;
+            await Task.Run(() =>
+            {
+                do
+                {
+                    num = ZkfpSDK.ZKFPM_AcquireFingerprint(devHandle, intPtr, (uint)imgBuffer.Length, intPtr2, ref size);
+                    Thread.Sleep(200);
+                    if (token.IsCancellationRequested)
+                    {
+                        num = ZkfpErrorCode.ZKFP_ERR_CANCEL;
+                    }
+                }
+                while (num == ZkfpErrorCode.ZKFP_ERR_CAPTURE);
+            });
+            if (ZkfpErrorCode.ZKFP_ERR_OK == num)
+            {
+                Marshal.Copy(intPtr, imgBuffer, 0, imgBuffer.Length);
+                Marshal.Copy(intPtr2, template, 0, size);
+            }
+            else
+            {
+                size = num;
+            }
+            Marshal.FreeHGlobal(intPtr);
+            Marshal.FreeHGlobal(intPtr2);
+            return size;
+        }
+        /// <summary>
         /// 采集指纹图像
         /// </summary>
         /// <param name="devHandle">设备句柄</param>
