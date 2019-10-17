@@ -47,7 +47,7 @@
     Zkfp.Dispose();
 ```
 ## 更新
-    新增可以取消验证指纹，使用方法：
+> 新增可以取消验证指纹，使用方法：
 ```
     CancellationTokenSource cts = new CancellationTokenSource();
     CancellationToken token;
