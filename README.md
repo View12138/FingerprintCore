@@ -11,7 +11,13 @@
     0.只有注册指纹和验证已有指纹时，请只使用 `ZkfpHelp.ZkfpTool` 类。
     1.有其它复杂使用场景时，请参照 `ZKFP` 官方文档使用。
 ## 使用：
-    可参照 ZkfpDemo 项目
+[ZkfpHelp.dll 下载地址](https://github.com/View12138/ZkfpHelp/releases)  
+    
+    1. 在你的 Windows 7+ 上安装 ZKFinger SDK(Windows) 5.0.0.20+
+    2. 将 ZkfpHelp.dll 和 ZkfpHelp.xml 放到同一目录下 (确保能有智能提示) 
+    3. 在你的项目中添加引用 ZkfpHelp.dll
+> 注: 可参照 ZkfpDemo 项目
+    调用方式:
 ```
     // 初始化帮助类
     ZkfpTool Zkfp = new ZkfpTool();
@@ -23,12 +29,12 @@
     bool success = await Zkfp.RegisterAsync();
     if(success)
     {
-        // 获取指纹模板的字符串
+        // 获取刚注册的指纹模板的字符串
         string fp = Zkfp.Fingerprint;
     }
 
-    // 设置你要验证的指纹模板
-    Zkfp.Fingerprint= /* 你的指纹模板 */
+    // 设置你要验证的指纹模板字符串
+    Zkfp.Fingerprint= /* 你的指纹模板字符串 */
     
     // 异步验证
     bool success = await Zkfp.IdentifyAsync();
