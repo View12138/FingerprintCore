@@ -319,6 +319,16 @@
             <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
             <returns></returns>
         </member>
+        <member name="M:ZkfpHelp.ZkfpSDK.AcquireFingerprintAsync(System.IntPtr,System.Byte[],System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            以异步方式采集指纹。
+            <para>采集成功则返回指纹的大小，采集失败则返回 <see cref="T:ZkfpHelp.ZkfpErrorCode"/> 中对应的错误代码。</para>
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgBuffer">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <returns></returns>
+        </member>
         <member name="M:ZkfpHelp.ZkfpSDK.AcquireFingerprintImage(System.IntPtr,System.Byte[])">
             <summary>
             采集指纹图像
@@ -532,6 +542,17 @@
             <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.FingrtImage"/> 属性获取操作成功之后的指纹图像。</para>
             <para></para>
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZkfpHelp.ZkfpTool.IdentifyAsync(System.Threading.CancellationToken)">
+            <summary>
+            以异步的方式验证当前用户是否为本人。
+            <para>验证成功返回 <see langword="true"/> ，验证失败返回<see  langword="false"/>。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.Fingerprint"/> 属性获取操作成功之后的指纹模板字符串。</para>
+            <para>可以通过 <see cref="P:ZkfpHelp.ZkfpTool.FingrtImage"/> 属性获取操作成功之后的指纹图像。</para>
+            <para>如果返回值为 <see langword="null"/> ，则代表取消验证</para>
+            </summary>
+            <param name="token">取消异步等待</param>
             <returns></returns>
         </member>
         <member name="M:ZkfpHelp.ZkfpTool.Register">
