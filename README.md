@@ -59,7 +59,7 @@
     {
         token = cts.Token;
         bool? result = await App.Zkfp.IdentifyAsync(token);
-        if(result==null)
+        if(!result.HasValue)
         {
             //取消验证
         }
