@@ -76,7 +76,7 @@
     /// <summary>
     /// 取消指纹验证
     /// </summary>
-    public void CancekIdentify()
+    public void CancelIdentify()
     {
         if (!token.IsCancellationRequested)
         {
