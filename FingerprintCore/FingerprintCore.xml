@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FingerprintCore</name>
+    </assembly>
+    <members>
+        <member name="T:FingerprintCore.Device.SDK.Zkfp.ErrorCode">
+            <summary>
+            错误码
+            </summary>    
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.AlreadyInit">
+            <summary>
+            已经初始化
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.OK">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.InitLib">
+            <summary>
+            初始化算法库失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Init">
+            <summary>
+             初始化采集库失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.NoDevice">
+            <summary>
+            无设备连接
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.NotSupport">
+            <summary>
+             接口暂不支持
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.InvalidParam">
+            <summary>
+            无效参数
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Open">
+            <summary>
+            打开设备失败 
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.InvalidHandle">
+            <summary>
+            无效句柄
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Capture">
+            <summary>
+             取像失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.ExtractFP">
+            <summary>
+            提取指纹模板失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Absort">
+            <summary>
+            中断
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.MemoryNotEnough">
+            <summary>
+            内存不足 
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Busy">
+            <summary>
+            当前正在采集
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.AddFinger">
+            <summary>
+            添加指纹模板失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.DeleteFinger">
+            <summary>
+            删除指纹失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Cancel">
+            <summary>
+            取消采集
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.VerifyFP">
+            <summary>
+            比对指纹失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Merge">
+            <summary>
+            合并登记指纹模板失败
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.NotOpened">
+            <summary>
+            设备未打开
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.NotInit">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.AlreadyOpened">
+            <summary>
+            设备已打开
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.LoadImage">
+            <summary>
+            [LoadImage]
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.AnalyseImage">
+            <summary>
+            [AnalyseImage]
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ErrorCode.Timeout">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="T:FingerprintCore.Device.SDK.Zkfp.ParamCode">
+            <summary>
+            传入参数类型
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ImageWidth">
+            <summary>
+            图像宽
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ImageHeight">
+            <summary>
+            图像高
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ImageDPI">
+            <summary>
+            图像 DPI(儿童建议设置750/1000)
+            <para>属性：读写(目前只有LIVEID20R可写)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ImageDataSize">
+            <summary>
+            图像数据大小
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.VIDandPID">
+            <summary>
+            VID&amp;PID(前 2 字节VID,后 2 字节PID)
+            <para>属性：只读</para>
+            <para>数据类型：byte[4]</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.AntiSpoofingSwitch">
+            <summary>
+            防假开关(1 打开/0关闭)
+            <para>属性：读写(目前只有LIVEID20R可写)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.TrueFinger">
+            <summary>
+            第五位全为1表示真手指(value&amp;31==31)
+            <para>属性：只读</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ManufacturerInformation">
+            <summary>
+            厂商信息
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.ProductName">
+            <summary>
+            产品名
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.SerialNumber">
+            <summary>
+            设备序列号
+            <para>属性：只读</para>
+            <para>数据类型：string</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.WhiteLight">
+            <summary>
+            1 表示闪白灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.GreenLight">
+            <summary>
+            1 表示闪绿灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.RedLight">
+            <summary>
+            1 表示闪红灯;0 表示关闭
+            <para>属性：只写(非 LIVE20R 需要调用关闭)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.SDK.Zkfp.ParamCode.OpenBuzzer">
+            <summary>
+            1 表示开启蜂鸣器;0 表示关闭
+            <para>属性：只写(LIVE20R 不支持)</para>
+            <para>数据类型：int</para>
+            </summary>
+        </member>
+        <member name="T:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp">
+            <summary>
+            C# 版本的
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.Init">
+            <summary>
+            初始化库
+            </summary>
+            <returns>0 成功，其他失败（见错误代码说明）</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.Terminate">
+            <summary>
+            释放库资源
+            </summary>
+            <returns>0 成功，其他失败（见错误代码说明）</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.GetDeviceCount">
+            <summary>
+            获取连接设备数
+            </summary>
+            <returns>返回设备数</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.OpenDevice(System.Int32)">
+            <summary>
+            连接设备
+            </summary>
+            <param name="index">设备索引(0~n,n 为设备数-1)</param>
+            <returns>返回设备句柄</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.CloseDevice(System.IntPtr@)">
+            <summary>
+            关闭设备
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.AcquireFingerprint(System.IntPtr,System.Byte[],System.Byte[])">
+            <summary>
+            采集指纹
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgBuffer">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.AcquireFingerprintImage(System.IntPtr,System.Byte[])">
+            <summary>
+            采集指纹图像
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="imgbuf">返回图像（数组大小为 imageWidth*imageHeight）</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.SetParameters(System.IntPtr,FingerprintCore.Device.SDK.Zkfp.ParamCode,System.Byte[])">
+            <summary>
+            设置参数
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="code">参数代码(见附录说明)</param>
+            <param name="pramValue">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.GetParameters(System.IntPtr,FingerprintCore.Device.SDK.Zkfp.ParamCode,System.Byte[])">
+            <summary>
+            获取参数
+            </summary>
+            <param name="devHandle">设备句柄</param>
+            <param name="code">参数代码(见附录说明)</param>
+            <param name="paramValue">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBInit">
+            <summary>
+            初始化算法库
+            </summary>
+            <returns>算法操作句柄</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBFree(System.IntPtr)">
+            <summary>
+            释放算法库
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBMerge(System.IntPtr,System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            将三枚预登记指纹模板合并成一枚登记模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="temp1">预登记指纹模板 1</param>
+            <param name="temp2">预登记指纹模板 2</param>
+            <param name="temp3">预登记指纹模板 3</param>
+            <param name="regTemp">返回登记模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBAdd(System.IntPtr,System.Int32,System.Byte[])">
+            <summary>
+            添加一枚登记模板到内存
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="fid">指纹 ID(1:N 识别成功返回指纹 ID)</param>
+            <param name="regTemp">登记模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBDel(System.IntPtr,System.Int32)">
+            <summary>
+            从内存中删除一枚登记模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="fid">指纹 ID(1:N 识别成功返回指纹 ID)</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBClear(System.IntPtr)">
+            <summary>
+            清空内存中所有指纹模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.DBMatch(System.IntPtr,System.Byte[],System.Byte[])">
+            <summary>
+            1:1 比对两枚指纹
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="temp1">比对模板 1</param>
+            <param name="temp2">比对模板 2</param>
+            <returns>>=0 表示比对分数，其他失败（见错误代码说明）</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.ByteArray2Int(System.Byte[])">
+            <summary>
+            4 字节 byte 数组转 Int
+            </summary>
+            <param name="buffer">byte 数组</param>
+            <returns>true 成功;false 失败</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.Int2ByteArray(System.Int32)">
+            <summary>
+            Int 转 4 字节 byte 数组
+            </summary>
+            <param name="value">数据</param>
+            <returns>true 成功;false 失败</returns>
+        </member>
+        <member name="M:FingerprintCore.Device.SDK.Zkfp.ZkfpSharp.ExtractFromImage(System.IntPtr,System.String,System.Int32,System.Byte[],System.Int32@)">
+            <summary>
+            从 BMP 或者 JPG 文件提取模板
+            </summary>
+            <param name="dbHandle">算法操作句柄</param>
+            <param name="FileName">文件全路径</param>
+            <param name="DPI">图像 DPI</param>
+            <param name="template">返回指纹模板(建议预分配 2048Bytes)</param>
+            <param name="size">[in]template 数组长度, [out] 实际返回指纹模板长度</param>
+            <returns></returns>
+        </member>
+        <member name="T:FingerprintCore.Device.Devices">
+            <summary>
+            设备厂商枚举
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.Devices.ZKFP">
+            <summary>
+            中控指纹仪
+            </summary>
+        </member>
+        <member name="T:FingerprintCore.Device.Zkfp.LightType">
+            <summary>
+            指纹仪的 LED 灯状态
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.Zkfp.LightType.White">
+            <summary>
+            闪烁白灯
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.Zkfp.LightType.Green">
+            <summary>
+            闪烁绿灯
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Device.Zkfp.LightType.Red">
+            <summary>
+            闪烁红灯
+            </summary>
+        </member>
+        <member name="T:FingerprintCore.Device.Zkfp.ZKFingerprint">
+            <summary>
+            中控指纹仪操作类
+            </summary>
+        </member>
+        <member name="P:FingerprintCore.Device.Zkfp.ZKFingerprint.IsInit">
+            <summary>
+            获取一个值，指示是否初始化完成
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.Finalize">
+            <summary>
+            析构
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.Initialization">
+            <summary>
+            初始化中控指纹仪，并打开第一个设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.Initialization(System.Int32)">
+            <summary>
+            初始化中控指纹仪
+            </summary>
+            <param name="deviceIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.GetFingerprint">
+            <summary>
+            获取指纹
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.GetFingerprintAsync">
+            <summary>
+            已异步的方式获取指纹
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.GetFingerprintAsync(System.Threading.CancellationToken)">
+            <summary>
+            已异步的方式获取指纹，可取消
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.Merge(FingerprintCore.Models.FingerprintInfo[])">
+            <summary>
+            将三枚指纹模板合并成一枚指纹模板
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="fingerprints">具有指纹模板的指纹信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.Verify(FingerprintCore.Models.FingerprintInfo,FingerprintCore.Models.FingerprintInfo)">
+            <summary>
+            验证两枚指纹模板是否相同
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Device.Zkfp.ZKFingerprint.SetLight(System.Enum)">
+            <summary>
+            使指纹仪 LED 灯闪烁
+            </summary>
+            <param name="type">指定的颜色 <see cref="T:FingerprintCore.Device.Zkfp.LightType"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:FingerprintCore.Extends.FingerprintExtend">
+            <summary>
+            指纹识别扩展类
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.Register(FingerprintCore.Interface.IFingerprint)">
+            <summary>
+            注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.Register(FingerprintCore.Interface.IFingerprint,System.Action{System.String,FingerprintCore.Models.MessageType})">
+            <summary>
+            注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <param name="action">提示方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.Register(FingerprintCore.Interface.IFingerprint,System.Action{System.String,FingerprintCore.Models.MessageType},System.String[])">
+            <summary>
+            注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <param name="action">提示方法</param>
+            <param name="describes">提示语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.RegisterAsync(FingerprintCore.Interface.IFingerprint)">
+            <summary>
+            已异步的方式注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.RegisterAsync(FingerprintCore.Interface.IFingerprint,System.Threading.CancellationToken)">
+            <summary>
+            已异步的方式注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <param name="cancellation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.RegisterAsync(FingerprintCore.Interface.IFingerprint,System.Action{System.String,FingerprintCore.Models.MessageType},System.Threading.CancellationToken)">
+            <summary>
+            已异步的方式注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <param name="action">提示方法</param>
+            <param name="cancellation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.RegisterAsync(FingerprintCore.Interface.IFingerprint,System.Action{System.String,FingerprintCore.Models.MessageType},System.String[],System.Threading.CancellationToken)">
+            <summary>
+            已异步的方式注册指纹
+            </summary>
+            <param name="fingerprint"></param>
+            <param name="action">提示方法</param>
+            <param name="describes">提示语句</param>
+            <param name="cancellation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.Merge(FingerprintCore.Interface.IFingerprint,System.Byte[][])">
+            <summary>
+            将三枚指纹模板合并成一枚指纹模板
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="fingerprint"></param>
+            <param name="templates">指纹模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Extends.FingerprintExtend.Verify(FingerprintCore.Interface.IFingerprint,System.Byte[],System.Byte[])">
+            <summary>
+            验证两枚指纹模板是否相同
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="fingerprint"></param>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FingerprintCore.Factory.FingerprintFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Factory.FingerprintFactory.CreateFingerprint(FingerprintCore.Device.Devices)">
+            <summary>
+            获取指定厂家的指纹一操作类
+            </summary>
+            <param name="device"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FingerprintCore.Interface.IFingerprint">
+            <summary>
+            指纹仪操作类
+            </summary>
+        </member>
+        <member name="P:FingerprintCore.Interface.IFingerprint.IsInit">
+            <summary>
+            获取一个值，指示是否初始化完成
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.Initialization">
+            <summary>
+            初始化并打开设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.Initialization(System.Int32)">
+            <summary>
+            初始化并打开指定的设备
+            </summary>
+            <param name="deviceIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.GetFingerprint">
+            <summary>
+            获取指纹
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.GetFingerprintAsync">
+            <summary>
+            已异步的方式获取指纹
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.GetFingerprintAsync(System.Threading.CancellationToken)">
+            <summary>
+            已异步的方式获取指纹，可取消
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.Merge(FingerprintCore.Models.FingerprintInfo[])">
+            <summary>
+            将三枚指纹模板合并成一枚指纹模板
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="fingerprints">具有指纹模板的指纹信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.Verify(FingerprintCore.Models.FingerprintInfo,FingerprintCore.Models.FingerprintInfo)">
+            <summary>
+            验证两枚指纹模板是否相同
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Interface.IFingerprint.SetLight(System.Enum)">
+            <summary>
+            使指纹仪 LED 灯闪烁
+            </summary>
+            <param name="type">指定的颜色，使用各指纹仪规定的LED枚举</param>
+            <returns></returns>
+        </member>
+        <member name="T:FingerprintCore.Models.FingerprintInfo">
+            <summary>
+            指纹信息
+            </summary>
+        </member>
+        <member name="P:FingerprintCore.Models.FingerprintInfo.Image">
+            <summary>
+            指纹图像
+            </summary>
+        </member>
+        <member name="P:FingerprintCore.Models.FingerprintInfo.Template">
+            <summary>
+            指纹模板
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.#ctor(FingerprintCore.Models.FingerprintType,System.Byte[][])">
+            <summary>
+            使用指纹模板和指纹图片初始化指纹信息
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"/>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="type">初始化的指纹类型</param>
+            <param name="datas">如果 <c><paramref name="type"/> == <see cref="F:FingerprintCore.Models.FingerprintType.Both"/></c>，则第一个参数为 <see cref="P:FingerprintCore.Models.FingerprintInfo.Image"/>，第二个参数为 <see cref="P:FingerprintCore.Models.FingerprintInfo.Template"/></param>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.#ctor(FingerprintCore.Models.FingerprintType,System.String[])">
+            <summary>
+            使用指纹模板和指纹图片初始化指纹信息
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"/>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="type">初始化的指纹类型</param>
+            <param name="datas">如果 <c><paramref name="type"/> == <see cref="F:FingerprintCore.Models.FingerprintType.Both"/></c>，则第一个参数为 <see cref="P:FingerprintCore.Models.FingerprintInfo.Image"/>，第二个参数为 <see cref="P:FingerprintCore.Models.FingerprintInfo.Template"/></param>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.Finalize">
+            <summary>
+            析构
+            </summary>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.ToString">
+            <summary>
+            返回 指纹模板的 base64 字符串
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.ToString(FingerprintCore.Models.FingerprintType)">
+            <summary>
+            返回指定的数据的 base64 字符串
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <param name="type">指定的类型，Both 等于 Template</param>
+            <returns></returns>
+        </member>
+        <member name="M:FingerprintCore.Models.FingerprintInfo.ToStrings">
+            <summary>
+            返回指纹图像、指纹模板的 base64 字符串。
+            </summary>
+            <exception cref="T:System.ArgumentNullException"/>
+            <returns>第一个为 指纹图像，第二个为指纹模板</returns>
+        </member>
+        <member name="T:FingerprintCore.Models.FingerprintType">
+            <summary>
+            指纹信息类型
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.FingerprintType.Template">
+            <summary>
+            指纹模板
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.FingerprintType.Image">
+            <summary>
+            指纹图像
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.FingerprintType.Both">
+            <summary>
+            两者兼有
+            </summary>
+        </member>
+        <member name="T:FingerprintCore.Models.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.MessageType.info">
+            <summary>
+            信息类
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.MessageType.Success">
+            <summary>
+            成功类
+            </summary>
+        </member>
+        <member name="F:FingerprintCore.Models.MessageType.Error">
+            <summary>
+            失败类
+            </summary>
+        </member>
+    </members>
+</doc>

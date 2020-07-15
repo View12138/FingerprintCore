@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FingerprintCore", "FingerprintCore\FingerprintCore.csproj", "{44175365-CC28-4B03-BD14-BBD7FFF1360B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{39861257-97F3-4E57-BD99-B4CC2BF9F6E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZkfpDemo", "Demo\ZkfpDemo\ZkfpDemo.csproj", "{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44175365-CC28-4B03-BD14-BBD7FFF1360B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44175365-CC28-4B03-BD14-BBD7FFF1360B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44175365-CC28-4B03-BD14-BBD7FFF1360B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44175365-CC28-4B03-BD14-BBD7FFF1360B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCEE59E9-93C2-44C3-BE86-C44B6BB985C8} = {39861257-97F3-4E57-BD99-B4CC2BF9F6E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {800F924E-B7B4-44AB-A79B-6C9520AF00F8}
+	EndGlobalSection
+EndGlobal
